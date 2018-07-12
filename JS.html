@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>your page title goes here</title>
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <!-- <script src="my_javascript.js"></script> -->
+    <script>
+
+
+// function multiplesOfThreeAndFive(num) {
+//   for (var i = 1; i <= num; i += 1) {
+//     if (i % 3 === 0 && i % 5 == 0) {
+//       console.log(String(i) + '!');
+//     } else if (i % 3 === 0 || i % 5 === 0) {
+//       console.log(String(i));
+//     }
+//   }
+// }
+
+// multiplesOfThreeAndFive(20);
+
+// function logMultiples(num) {
+//   for (var i = 100; i >= number; i -= 1) {
+//     if (i % num === 0 && i % 2 === 1) {
+//       console.log(i);
+//     }
+//   }
+// }
+// logMultiples(17);
+
+// function fizzbuzz() {
+//   for (var i = 1; i <= 100; i += 1) {
+//     if (i % 3 === 0 && i % 5 == 0) {
+//       console.log('FizzBuzz');
+//     } else if (i % 3 === 0) {
+//       console.log('Fizz');
+//     } else if (i % 5 === 0) {
+//       console.log('Buzz');
+//     } else {
+//       console.log(i);
+//     }
+//   }
+// }
+
+// fizzbuzz();
+
+// function isPrime(num) {
+//   var divisors = 0;
+//   for (var i = 1; i <= num; i += 1) {
+//     if (num % i === 0) {
+//       divisors += 1;
+//     }
+//   }
+
+//   console.log(divisors === 2);
+// }
+
+// isPrime(1);
+// isPrime(2);
+// isPrime(3);
+
+// function isXor(a, b) {
+//   !!((a && !b) || (!a && b))
+// }
+
+// isXor(null, '');
+
+// var failedAttempts = 0;
+// var password = 'password';
+// var guess;
+
+// while (true) {
+//   guess = prompt('What is the password?');
+  
+//   if (guess === password) {
+//     console.log('Successfully logged in');
+//     break;
+//   }
+
+//   failedAttempts += 1;
+
+//   if (failedAttempts === 3) {
+//     console.log('You have been denied access.');
+//     break;
+//   }
+// }
+
+
+// var score1 = Number(prompt('Enter score 1:'));
+// var score2 = Number(prompt('Enter score 2:'));
+// var score3 = Number(prompt('Enter score 3:'));
+
+// var total = score1 + score2 + score3;
+// var average = total / 3;
+
+// var grade = 'F';
+// if (average >= 90) {
+//   grade = 'A';
+// } else if (average >= 70 && average < 90) {
+//   grade = 'B';
+// } else if (average >= 50 && average < 70) {
+//   grade = 'C';
+// }
+
+// console.log('Based on the average of your 3 scores your letter grade is "' +
+//             grade + '".');
+
+// function gcd(a, b) {
+//   var max;
+//   var min = Math.min(a, b);
+
+//   for (max = Math.max(a, b); max >= min; max -= 1) {
+//     if (a % max === 0 && b % max === 0) {
+//       console.log(max);
+//       break;
+//     }
+//   }
+// }
+
+// gcd(12, 4);
+
+// function isPrime(num) {
+//   var divisors = 0;
+//   for (var i = 1; i <= num; i += 1) {
+//     if (num % i === 0) {
+//       divisors += 1;
+//     }
+//   }
+
+//   return !!(divisors === 2);
+// }
+
+// function checkGoldbach(num) {
+//   var primes = []
+//   for (var i = 2; i < num; i++) {
+//     if (isPrime(i)) {
+//       primes.push(i);
+//     }
+//   }
+
+//   for (var i = 0; i <= (primes.length + 1)/2; i++) {
+//     for (var y = 0; y <= (primes.length + 1); y++) {
+//       if (primes[i] + primes[y] === num) {
+//         console.log(primes[i], primes[y]);
+//       }
+//     }
+//   }
+// }
+
+// function checkGoldbach(n) {
+//   var num1 = 1;
+//   var num2;
+
+//   if (n < 4 || n % 2 === 1) {
+//     console.log(null);
+//     return;
+//   }
+
+//   do {
+//     num1 += 1;
+//     num2 = n - num1;
+//     if (isPrime(num1) && isPrime(num2)) {
+//       console.log(num1, num2);
+//     }
+
+//   } while (num1 !== num2);
+// }
+
+// checkGoldbach(105);
+
+// function generatePattern(num) {
+//   var numbers = [];
+//   var withoutStars = [];
+//   var stars;
+
+//   for (var i = 1; i <= num; i++) {
+//     numbers.push(i);
+//   }
+
+//   numbers = numbers.join('');
+  
+
+//   for (var y = 0; y < (numbers.length); y++) {
+//     stars = '*'.repeat(numbers.length - 1 - Number(withoutStars.join('').length));
+//     withoutStars.push(numbers[y]);
+//     console.log(withoutStars.join('') + stars);
+//   }
+// }
+
+// generatePattern(20);
+
+// function indexOf(firstString, secondString) {
+//   var n = firstString.length;
+//   var m = secondString.length;
+//   var counter = 0;
+//   var i;
+//   var y;
+  
+//   for (i = 0; i <= n - 1; i++) {
+//     for (y = 0; y <= m - 1; y++) {
+//       if (firstString[i + y] === secondString[y]) {
+//         counter += 1;
+//       } else {
+//         break;
+//       }
+//     }
+
+//     if (counter === m) {
+//       return console.log(i);
+//     }
+//   }
+
+//  return console.log(-1);
+// }
+
+
+// indexOf('Blue Whale', 'Blue');
+
+// function trim(string) {
+//   var beginning = 0;
+//   var end = 0;
+//   var result = ''
+
+//   if (string === '') {
+//     return console.log('');
+//   }
+
+//   for (var i = string.length - 1; i >= 0; i--) {
+//     if (string[i] !== ' ') {
+//       end += i;
+//       break;
+//     }
+//   }
+
+//   for (var y = 0; y <= string.length - 1; y++) {
+//     if (string[y] !== ' ') {
+//       beginning += y;
+//       break;
+//     }
+//   }
+
+//   for (var x = beginning; x <= end; x++) {
+//     result += string[x];
+//   }
+
+//   console.log(result);
+
+// }
+
+// trim('  abc  ');  // "abc"
+// trim('abc   ');   // "abc"
+// trim(' ab c');    // "ab c"
+// trim(' a b  c');  // "a b  c"
+// trim('      ');   // ""
+// trim('');         // ""
+
+// function splitString(string, delimiter) {
+//   var result = '';
+//   if (delimiter === '') {
+//     for (var i = 0; i <= string.length - 1; i++) {
+//       console.log(string[i]);
+//     }
+//   }
+
+//   for (var i = 0; i <= string.length - 1; i++) {
+//     if (delimiter !== '') {
+//       if (string[i] === delimiter) {
+//         console.log(result);
+//         result = '';
+//       } else if (i === string.length - 1) {
+//         result += string[i];
+//         console.log(result);
+//       }
+
+//       else {
+//         result += string[i];
+//       }
+//     }
+//   }
+// }
+
+// splitString('abc,123,hello world', ',');
+
+// splitString('hello', '');
+
+// function repeat(string, times) {
+//   var result = ''
+
+//   for (var i = 0; i < times; i++) {
+//     result += string;
+//   }
+
+//   console.log(result);
+// }
+
+// repeat('abc', 1);       // "abc"
+// repeat('abc', 2); 
+
+// function startsWith(string, searchString) {
+//   result = true;
+//   for (var i = 0; i < searchString.length; i++) {
+//     if (string[i] !== searchString[i]) {
+//       result = false;
+//     }
+//   }
+//   console.log(result);
+// }
+
+// var str = 'We put comprehension and mastery above all else';
+// startsWith(str, 'We');              // true
+// startsWith(str, 'We put');          // true
+
+// function toLowerCase(string) {
+//   var result = '';
+//   var asciiNumeric;
+//   for (i = 0; i < string.length; i++) {
+//     if (string[i] >= 'A' && string[i] <= 'Z') {
+//       asciiNumeric = string[i].charCodeAt(0) + 32;
+//       result += String.fromCharCode(asciiNumeric);
+//   } else {
+//     result += string[i];
+//   }
+// }
+
+//   console.log(result);
+
+// }
+
+// toLowerCase('ALPHABET');    // "alphabet"
+// toLowerCase('123');         // "123"
+// toLowerCase('abcDEF');      // "abcdef"
+
+// function substr(string, start, length) {
+//   var strlength = string.length;
+//   var realStart;
+//   var result = '';
+
+//   if (start < 0) {
+//     realStart = strlength + start;
+//   } else {
+//     realStart = start;
+//   }
+
+//   if (length < 1) {
+//     return '';
+//   }
+
+//   for (var i = realStart; i < realStart + length; i++) {
+//     if (string[i] === undefined) {
+//       break;
+//     }
+//     result += string[i];
+//   }
+
+//   console.log(result);
+// }
+
+// var string = 'hello world';
+
+// substr(string, 2, 4);      // "llo "
+// substr(string, -3, 2);     // "rl"
+// substr(string, 8, 20);     // "rld"
+// substr(string, 0, -20);    // ""
+// substr(string, 0, 0);      // ""
+
+// function substring(string, start, end) {
+//   var result = '';
+//   var begin;
+//   var stop;
+
+
+//   if (end < 0) {
+//     return console.log('');
+//   } else if (end > (string.length + 1)) {
+//     stop = string.length + 1;
+//     begin = start;
+//   } else if (Number(start) !== start) {
+//     begin = 0;
+//     stop = string.length + 1;
+//   } else if (end === undefined) {
+//     begin = start;
+//     stop = string.length + 1;
+//   } else if (start > end) {
+//     begin = end;
+//     stop = start;
+//   } else {
+//     begin = start;
+//     stop = end;
+//   }
+
+//   for (var i = begin; i < stop; i++) {
+//     if (string[i] !== undefined) {
+//       result += string[i];
+//     }
+//   }
+
+//   console.log(result);
+// }
+
+// var string = 'hello world';
+
+// substring(string, 2, 4);    // "ll"
+// substring(string, 4, 2);    // "ll"
+// substring(string, 0, -1);   // ""
+// substring(string, 2);       // "llo world"
+// substring(string, 'a');     // "hello world"
+// substring(string, 8, 20);   // "rld"
+
+// function isLetter(char) {
+//   return ((char >= 'A' && char <= 'Z') ||
+//   (char >= 'a' && char <= 'z'));
+// }
+
+// function inFirstHalfOfAlphabeth(char) {
+//   return (char >= 'A' && char <= 'M') ||
+//          (char >= 'a' && char <= 'm');
+// }
+
+// function inSecondHalfOfAlphabeth(char) {
+//   return (char >= 'N' && char <= 'Z') ||
+//          (char >= 'n' && char <= 'z');
+// }
+
+// function rot13(string) {
+//   var i;
+//   var asciiNumeric;
+//   var newAsciiNumeric;
+//   var newString = '';
+
+//   for (i = 0; i < string.length; i++) {
+//     asciiNumeric = string.charCodeAt(i);
+
+//     if (inFirstHalfOfAlphabeth(string[i])) {
+//        newAsciiNumeric = asciiNumeric + 13;
+//        newString += String.fromCharCode(newAsciiNumeric);
+//     } else if (inSecondHalfOfAlphabeth(string[i])) {
+//        newAsciiNumeric = asciiNumeric - 13;
+//        newString += String.fromCharCode(newAsciiNumeric);
+//     } else {
+//        newString += string[i];
+//     }
+//   }
+
+//   return newString;
+// }
+
+// console.log(rot13('Teachers open the door, but you must enter by yourself.'));
+
+// // logs:
+// // Grnpuref bcra gur qbbe, ohg lbh zhfg ragre ol lbhefrys.
+
+// console.log(rot13(rot13('Teachers open the door, but you must enter by yourself.')));
+
+
+
+
+
+
+
+    </script>
+  </body>
+</html>

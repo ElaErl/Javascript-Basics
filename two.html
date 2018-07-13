@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>your page title goes here</title>
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <script>
+
+  // Writing basic funtions
+
+  // 1. exercise
+
+      function push(arr, value) {
+        arr[arr.length] = value;
+        return arr.length;
+      }
+
+  // 2. exercise
+
+      function pop(arr) {
+        var lastElement = arr[arr.length - 1];
+        arr.length = arr.length - 1;
+        return lastElement;
+      }
+
+  // 3. exercise
+
+      function unshift(arr, value) {
+        for (var i = arr.length; i >= 0; i--) {
+          arr[i] = arr[i - 1];
+        }
+        arr[0] = value;
+
+        return arr.length;
+      }
+
+  // 4. exercise
+
+      function shift(arr) {
+        var firstValue = arr[0];
+        for (var i = 0; i < arr.length - 1; i++) {
+          arr[i] = arr[i + 1];
+        }
+        
+        arr.length = arr.length - 1;
+        return firstValue;
+      }
+      
+    </script>
+  </body>
+</html>

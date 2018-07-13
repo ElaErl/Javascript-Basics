@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>your page title goes here</title>
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <script>
+
+      // Intermedia Array Uses
+
+      // 1. exercise
+
+      function oddElementsOf(arr) {
+        var i;
+        var newArr;
+
+        for (i = 0; i < arr.length; i += 2) {
+          newArr.push(arr[i]);
+        }
+
+        return newArr;
+      }
+
+      //. 2. exercise
+
+      function combinedArray(even, odd) {
+        var newArr = [];
+        var i = 0;
+
+        while (i < even.length) {
+          newArr.push(even[i]);
+          newArr.push(odd[i]);
+          i += 1;
+        }
+
+        return newArr;
+      }
+
+      // 3. exercise
+
+      function sortDescending(arr) {
+        var arrCopy = arr.slice();
+        return arrCopy.sort(function (a, b) { return b - a; });
+      }
+
+      // 4. exercise
+
+      function matrixSums(arr) {
+        var i;
+        var sums = [];
+        var sum = 0;
+
+        for (i = 0; i < arr.length; i += 1) {
+          for (y = 0; y < arr[i].length; y += 1) {
+            sum += arr[i][y];
+
+            if (y === arr[i].length - 1) {
+              sums.push(sum);
+              sum = 0;
+            }
+          }
+        }
+
+        return sums;
+      }
+
+      // 5. exercise
+
+      function uniqueElements(arr) {
+        var i;
+        var newArr = [];
+
+        for (i = 0; i < arr.length; i++) {
+          if (!newArr.includes(arr[i])) {
+            newArr.push(arr[i]);
+          } 
+        }
+
+        return newArr;
+      }
+
+      // 6. exercise 
+
+      function missing(arr) {
+        var start = arr[0];
+        var end = arr[arr.length - 1];
+        var i;
+        var result = [];
+
+        for (i = start + 1; i < end; i++) {
+          if (arr.indexOf(i) === -1) {
+            result.push(i);
+          }
+        }
+
+        return result;
+      }
+      
+    </script>
+  </body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>your page title goes here</title>
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <script>
+
+      // Writing Array Operations: slice, splice, concat, and join
+
+      // 1. exercise
+
+      function push(arr, value) {
+        arr[arr.length] = value;
+        return arr.length;
+      }
+
+      function slice(arr, start, end) {
+        var newArr = [];
+        var i;
+
+        for (i = start; i < end; i++) {
+          push(newArr, arr[i]);
+        }
+
+        return newArr;
+      }
+
+      // !!!! 2. exercise 
+
+      function splice(arr, start, number) {
+        var i;
+        var newArr = [];
+
+        for (i = start; i < arr.length; i++) {
+          if (i < start + number) {
+            push(newArr, arr[i]);
+          }
+
+          arr[i] = arr[i + number];
+        }
+
+        arr.length = arr.length - number;
+        return newArr;
+      }
+
+      // 3. exercise
+
+      function concat(arr1, arr2) {
+        var newArr = [];
+        var i;
+
+        for (i = 0; i < arr1.length; i++) {
+          push(newArr, arr1[i]);
+        }
+
+        for (i = 0; i < arr1.length; i++) {
+          push(newArr, arr1[i]);
+        }
+
+        return newArr;
+      }
+
+      // 4. exercise 
+
+      function join(arr, string) {
+        var i;
+        var joinedArr = '';
+
+        for (i = 0; i < arr.length; i++) {
+          joinedArr += String(arr[i]);
+          if (i < arr.length - 1) {
+            joinedArr += string;
+          }
+        }
+
+        return joinedArr;
+      }  
+      
+    </script>
+  </body>
+</html>

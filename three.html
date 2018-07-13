@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>your page title goes here</title>
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <script>
+
+      // Writing Array Operations: indexOf and lastIndexOf 
+
+      // 1. exercise
+
+      function indexOf(arr, value) {
+        var i;
+        for (i = 0; i < arr.length; i++) {
+          if (arr[i] === value) {
+            return i;
+          }
+        }
+
+        return i;
+      }
+
+      // 2. exercise 
+
+      function lastIndexOf(arr, value) {
+        var i;
+        for (i = arr.length - 1; i >= 0; i--) {
+          if (arr[i] === value) {
+            return i;
+          }
+        }
+
+        return -1;
+      }
+      
+    </script>
+  </body>
+</html>

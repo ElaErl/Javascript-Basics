@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>your page title goes here</title>
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <script>
+
+  // 1. exercise
+
+      function lastInArray(array) {
+        return array[array.length - 1];
+      }
+
+      console.log(lastInArray([1, 2, 3, 4]));
+
+  // 2. exercise
+
+      function rollCall(arr) {
+        for (var i = 0; i < arr.length; i++) {
+          console.log(arr[i]);
+        }
+      }
+
+      var names = ['Steve', 'Martha', 'Pat'];
+
+      rollCall(names);
+
+  // 3. exercise
+
+      function reversedArray(arr) {
+        var newArray = [];
+
+        for(var i = arr.length - 1; i >= 0; i--) {
+          newArray.push(arr[i]);
+        }
+
+        return newArray;
+      }
+
+      var numbers = [1, 2, 3, 4, 5];
+
+      console.log(reverseArray(numbers));
+
+  // 4. exercise
+
+      function findValue(value, arr) {
+        var i;
+        var result = -1;
+        for (i = 0; i < arr.length; i += 1) {
+          if (arr[i] === value) {
+            result = i;
+            break;
+          }
+        }
+
+        return result;
+      }
+
+      console.log(firstIndex(2, [1, 2, 3]));
+      console.log(firstIndex(9, [1, 2, 3]));
+
+  // 1. exercise
+
+      function arrayToString(arr) {
+        var string = '';
+        for (i = 0; i < arr.length; i++) {
+          string += String(arr[i]);
+        }
+
+        return string;
+      }
+
+      console.log(arrayToString([1, 2, 3]));
+
+    </script>
+  </body>
+</html>

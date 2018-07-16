@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>your page title goes here</title>
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <script>
+
+      // Practice Objects
+
+      // 1. exercise
+
+      function greetings(arr, object) {
+        var name = arr.join(' ');
+        var occupation = object['title'] + ' ' + object['occupation'];
+        return 'Hello, ' + name + '! ' + 'Nice to have a ' + occupation + ' around.'
+      }
+
+      console.log(greetings(['John', 'Q', 'Doe'], { title: 'Master', occupation: 'Plumber' }));
+
+      // 2. exercise
+
+      function repeatedCharacters(string) {
+        var result = {};
+        var lowerCase = string.toLowerCase();
+        var i;
+        var char;
+        var key;
+
+        for (i = 0; i < lowerCase.length; i++) {
+          char = lowerCase[i];
+          if (result[char]) {
+            result[char] += 1
+          } else {
+            result[char] = 1;
+          }
+        }
+
+        for (key in result) {
+          if (result[key] === 1) {
+            delete result[key];
+          }
+        }
+
+        return result;
+      }
+
+      console.log(repeatedCharacters('Programming'));     
+      
+    </script>
+  </body>
+</html>
